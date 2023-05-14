@@ -25,6 +25,10 @@ font-family: 'Ubuntu', sans-serif; */
   --primary-background-color: burlywood;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   font-family: "Nunito Sans", sans-serif;
@@ -472,7 +476,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
+  margin: 100px 0 0 50px;
 }
 
 .menuLogo {
