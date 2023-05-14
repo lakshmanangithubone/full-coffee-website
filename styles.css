@@ -1,0 +1,1029 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kaushan+Script&family=Lato:wght@400;700&family=Merienda:wght@400;600;800;900&family=Montserrat:wght@500&family=Nunito+Sans:wght@400;600&family=Open+Sans&family=Poppins:wght@500&family=Raleway:wght@300;400;500;600;700;800;900&family=Source+Serif+Pro&family=Ubuntu:wght@500&display=swap");
+
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Merienda', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: gray;
+  --secondary-text-color: black;
+  --third-text-color: white;
+  --primary-background-color: burlywood;
+}
+
+body {
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+nav {
+  width: 100%;
+  background-color: var(--third-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.189);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+}
+
+.navLinks {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 100px;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+.navLinks li a:hover {
+  text-decoration: underline;
+}
+
+.toggleButtons {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.closeButton {
+  display: none;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* media queries */
+
+/* media query for screen size less than 1200px */
+
+@media (max-width: 1200px) {
+  .navLinks {
+    width: 50%;
+  }
+}
+
+/* media query for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  .navLinks {
+    width: 60%;
+    margin-right: 50px;
+  }
+}
+
+/* media query for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: start;
+    height: 100vh;
+    width: 50%;
+    margin-right: 0px;
+    padding: 80px 0px 80% 50px;
+    transform: translateX(150%);
+    transition: all 0.2s ease;
+  }
+
+  .navLinks li {
+    margin: 15px 0;
+  }
+
+  .navLinks li a {
+    color: var(--secondary-text-color);
+  }
+  .toggleButtons {
+    display: flex;
+  }
+
+  .menuButton {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 25px;
+    right: 0px;
+  }
+
+  .navLinks.showNavLinks {
+    transform: translateX(0);
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .navLinks {
+    width: 70%;
+    padding-bottom: 70%;
+  }
+
+  .navLinks li {
+    margin: 0px;
+  }
+}
+
+/* ------------------------------------------------------ */
+
+.heroSection {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(90deg, var(--third-text-color), transparent 70%),
+    url("images/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.heroSectionContent {
+  width: 40%;
+  margin-left: 100px;
+}
+
+.heroSectionContent > * {
+  margin: 20px 0;
+}
+
+.heroSectionHeader h1 {
+  font-family: "Merienda", cursive;
+  font-size: 60px;
+  text-align: center;
+}
+
+.heroSectionBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroSectionBody p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 2;
+}
+
+.heroSectionBody .heroSectionButton {
+  width: 100px;
+  height: 40px;
+  outline: none;
+  border: 0;
+  background-color: var(--primary-background-color);
+  color: var(--third-text-color);
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.heroSectionBody .heroSectionButton:hover {
+  background-color: var(--secondary-text-color);
+}
+
+.heroSectionButton a {
+  text-decoration: none;
+  color: var(--third-text-color);
+}
+
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .heroSectionContent {
+    width: 60%;
+    margin-left: 20px;
+  }
+
+  .heroSectionHeader h1 {
+    font-size: 40px;
+  }
+}
+
+/* -----------------------------------------------------------*/
+
+/* about us section */
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5vw;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.aboutLogo {
+  width: 50%;
+  height: 600px;
+}
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutText {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTextHeader h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: "Merienda", cursive;
+}
+
+.aboutTextBody p {
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+.aboutTextBody .aboutTextButton {
+  width: 100px;
+  height: 40px;
+  outline: none;
+  border: 0;
+  background-color: var(--primary-background-color);
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.aboutTextButton a {
+  text-decoration: none;
+  color: var(--third-text-color);
+}
+.aboutTextBody .aboutTextButton:hover {
+  background-color: var(--secondary-text-color);
+}
+.aboutTextBody .aboutTextButton:hover .aboutTextButton a {
+  color: var(--third-background-color);
+}
+
+.ourFacility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.ourFacilityHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.facilityLogo {
+  width: 150px;
+  height: 50px;
+}
+
+.facilityImage {
+  width: 100%;
+  height: 100%;
+}
+
+.ourFacilityHeader h2 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: "Merienda", cursive;
+  text-align: center;
+}
+
+.ourFacilityBody {
+  width: 100%;
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.facilityFeatures {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.facilityFeatures > * {
+  margin: 10px 0;
+}
+
+.facilityFeatures h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.facilityFeatures p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* media queries */
+
+/* media queries for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .ourFacilityBody {
+    padding: 0;
+  }
+
+  .facilityFeatures {
+    width: 40%;
+  }
+}
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0px;
+  }
+
+  .aboutTextHeader h2 {
+    font-size: 30px;
+  }
+
+  .aboutContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutTextBody .aboutTextButton {
+    width: 60%;
+  }
+
+  .aboutLogo {
+    width: 80%;
+    height: 350px;
+  }
+
+  .aboutText {
+    width: 90%;
+    margin-top: 20px;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .aboutTextBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .aboutTextBody p {
+    text-align: justify;
+  }
+  .aboutTextBody .aboutTextButton {
+    width: 100px;
+    text-align: center;
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .ourFacilityHeader h2 {
+    font-size: 30px;
+  }
+  .facilityFeatures {
+    width: 60%;
+  }
+}
+
+/* --------------------------------------------------- */
+
+/* menu section */
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10vw;
+}
+
+.menuHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.menuLogo {
+  width: 150px;
+  height: 50px;
+}
+
+.HeadingImage {
+  width: 100%;
+  height: 100%;
+}
+
+.menuHeader h2 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: "Merienda", cursive;
+  text-align: center;
+}
+
+.menuBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuItemLogo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.menuItemImage {
+  width: 100%;
+  height: 100%;
+}
+
+.menuItem p {
+  font-size: 20px;
+}
+
+/* media queries */
+
+/* media queries for screen size less than 1200px */
+
+@media (max-width: 1200px) {
+  .menuItemLogo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* media queries for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .menu {
+    padding: 0px 8vw;
+  }
+
+  .menuBody {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menuItemLogo {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+}
+
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .menuItemLogo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .menuBody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menuItemLogo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .menuHeader h2 {
+    font-size: 30px;
+  }
+}
+
+/* -------------------------------------------------------- */
+
+/* gallery section */
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galleryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.headingLogo {
+  width: 150px;
+  height: 50px;
+}
+
+.headingImage {
+  width: 100%;
+  height: 100%;
+}
+
+.galleryHeader h2 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: "Merienda", cursive;
+  text-align: center;
+}
+
+.galleryBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.galleryImage {
+  width: 300px;
+  height: 220px;
+  margin-bottom: 10px;
+}
+
+.galleryPic {
+  width: 100%;
+  height: 100%;
+}
+
+/* media queries for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .galleryBody {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .galleryImage {
+    width: 260px;
+    height: 200px;
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .galleryHeader h2 {
+    font-size: 30px;
+  }
+  .galleryBody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .galleryImage {
+    width: 300px;
+    height: 220px;
+  }
+}
+
+/* ------------------------------------------------------------ */
+
+/* team section */
+
+.team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.headingLogo {
+  width: 150px;
+  height: 50px;
+}
+
+.headingImage {
+  width: 100%;
+  height: 100%;
+}
+
+.teamHeader h2 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: "Merienda", cursive;
+  text-align: center;
+}
+
+.teamBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memberImage {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.memberPic {
+  width: 100%;
+  height: 100%;
+}
+
+/* media queries for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .teamBody {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .memberImage {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .teamHeader h2 {
+    font-size: 30px;
+  }
+  .teamBody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .memberImage {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* ------------------------------------------------------------ */
+
+/* contact section */
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 50px 0 0 0; */
+}
+
+.headingLogo {
+  width: 150px;
+  height: 50px;
+}
+
+.headingImage {
+  width: 100%;
+  height: 100%;
+}
+
+.contactHeader h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-family: "Merienda", cursive;
+}
+
+.contactBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contactImage {
+  width: 50%;
+  height: 600px;
+}
+
+.contactPic {
+  width: 100%;
+  height: 100%;
+}
+
+.contactForm {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--secondary-text-color);
+  padding: 20px;
+  margin-right: 10%;
+}
+
+.contactFormHeader h4 {
+  font-size: 20px;
+}
+
+.contactFormBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.contactFormBody > * {
+  margin: 10px 0;
+}
+
+.inputBox {
+  width: 100%;
+}
+
+.nameInput,
+.telInput,
+.numberInput {
+  width: 100%;
+  border: 1px solid black;
+  outline: none;
+  padding: 10px 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contactFormButton {
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: 0;
+  background-color: var(--primary-background-color);
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.contactFormButton a {
+  text-decoration: none;
+  color: var(--third-text-color);
+}
+.contactFormButton:hover {
+  background-color: var(--secondary-text-color);
+}
+.contactFormButton:hover .contactFormButton a {
+  color: var(--third-background-color);
+}
+
+/* media queries for screen size less than 1200px */
+
+@media (max-width: 1200px) {
+  .contactForm {
+    width: 40%;
+  }
+}
+
+/* media queries for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .contactForm {
+    width: 40%;
+  }
+}
+
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .contactBody {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contactImage {
+    width: 70%;
+    height: 40%;
+  }
+
+  .contactForm {
+    width: 80%;
+    margin-right: 0%;
+    margin-bottom: 50px;
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .contactHeader h2 {
+    font-size: 30px;
+  }
+
+  .contactFormButton {
+    width: 120px;
+    font-size: 13px;
+  }
+}
+
+/* ----------------------------------------------------------- */
+
+/* contact icons section */
+
+.contactIcons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfoContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 30px;
+  padding: 0px 10vw;
+  margin: 20px 0;
+}
+
+.contactInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.contactInfo > * {
+  margin: 5px 0;
+}
+
+.contactInfoHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contactInfoImage i {
+  background-color: var(--primary-background-color);
+  color: var(--third-text-color);
+  font-size: 35px;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.contactInfoBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.copyright p {
+  margin: 10px;
+  padding: 20px 0;
+}
+
+.copyright p a {
+  text-decoration: none;
+  color: var(--primary-background-color);
+}
+
+.copyright p a:hover {
+  text-decoration: underline;
+}
+
+/* media queries for screen size less than 992px */
+
+@media (max-width: 992px) {
+  .contactInfoContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* media queries for screen size less than 768px */
+
+@media (max-width: 768px) {
+  .contactInfoContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* media queries for screen size less than 576px */
+
+@media (max-width: 576px) {
+  .contactInfoContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
