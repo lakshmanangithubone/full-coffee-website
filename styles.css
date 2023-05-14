@@ -476,7 +476,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px 0 0 50px;
+  margin: 100px 0 50px 0;
 }
 
 .menuLogo {
@@ -939,6 +939,8 @@ input::-webkit-inner-spin-button {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactInfoContainer {
@@ -1020,6 +1022,10 @@ input::-webkit-inner-spin-button {
 @media (max-width: 768px) {
   .contactInfoContainer {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactInfo {
+    margin: 10px 0;
   }
 }
 
